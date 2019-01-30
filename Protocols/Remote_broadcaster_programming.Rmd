@@ -1,0 +1,43 @@
+---
+title: "Black Rail remote broadcast unit programming"
+author: Adam Smith, USFWS Southeast Inventory and Monitoring (adam_d_smith@fws.gov)
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+geometry: margin=0.75in
+urlcolor: blue
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancypagestyle{plain}
+  - \fancyhf{}
+  - \renewcommand{\headrulewidth}{0pt}
+  - \renewcommand{\footrulewidth}{0pt}
+  - \usepackage{tikz}
+  - \usepackage{scalerel}
+  - \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=.35pt] (char) {#1};}}
+  - \newcommand{\myclock}{\scalerel*{\includegraphics{images/clock}}{B}}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\fontsize{12}{14}
+\selectfont
+
+1. **Determine sequence to program using up-to-date [BLRA Remote Broadcast Unit Sequence List]()**
+
+1. **Update the date and time of the timer.**
+    a. Visit [time.gov](https://time.gov/) for current official time.
+    b. While holding the \myclock{} button, use the `D+` button to change day, the `H+` button to change hour, and the `M+` button to change minute, as necessary. If no button is pressed for 2 seconds while holding the \myclock{} button, you will need to release the \myclock{} button and push/hold it again to further adjust the day of week or time.
+    
+1. **Set the remote broadcast unit program.**
+    a. Every sequence available in step 1 requires scheduling \underline{FOUR} `ON/OFF` programs. They \underline{DO NOT} always occur on four consecutive days of the week. When programming a particular broadcast sequence, pay careful attention to the days of the week and the `ON/OFF` timing of the four programs.
+    b. Programming begins by setting the `ON` time for the first program. Press the \circled{P} button to advance to the programming interface. The timer display should indicate `ON` and the number `1`.
+    c. Repeatedly press the `D+` button until the correct day of the week for the first program is indicated.
+    d. Set the appropriate `ON` time for the program using the `H+` and `M+` buttons. Consult the sunrise/sunset calendar for setting times relative to sunrise and sunset.
+    e. Press the \circled{P} button to advance and set the `OFF` time for program `1`, using steps 3c and 3d.
+    f. Repeat steps 3b - 3e to set the `ON` and `OFF` times for programs 2 through 4.
+    g. Press the \myclock{} button when finished setting the `OFF` time for program 4.
+    h. Repeatedly press \circled{P} to cycle through and double-check the days and `ON/OFF` times of the four programs against the expected broadcast sequence.
+    i. Repeat step 3h. Not kidding...

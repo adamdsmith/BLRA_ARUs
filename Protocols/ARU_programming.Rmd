@@ -1,0 +1,111 @@
+---
+title: "Black Rail Song Meter 2+ (ARU) programming"
+author: Adam Smith, USFWS Southeast Inventory and Monitoring (adam_d_smith@fws.gov)
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: pdf_document
+geometry: margin=0.75in
+urlcolor: blue
+graphics: yes
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancypagestyle{plain}
+  - \fancyhf{}
+  - \renewcommand{\headrulewidth}{0pt}
+  - \renewcommand{\footrulewidth}{0pt}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
+```
+
+\fontsize{12}{14}
+\selectfont
+
+1. **Remove front panel from Song Meter 2+ (ARU)**
+
+1. **Check/install batteries**
+    a. The main power supply is 4 "D"-sized high-capacity rechargeable NiMH batteries. Make sure these are fully charged. The internal clock runs on 2 "AA" alkaline batteries. Replace (or at least check the voltage levels of) these prior to first deployment each year.
+
+1. **Install flash cards**
+    a. Insert 1 - 4 SDHC cards (16, 32, 64, or 128 GB; Class 10), filling from Slot A - D as needed.
+    
+    ```{r, out.width=".75\\linewidth"}
+    # All defaults
+    knitr::include_graphics("./images/SM2_overview.jpg")
+    ```
+
+1. **Check bias and gain jumper settings**
+    a. Ensure bias and gain jumpers (left side of the control panel) match the following figure on both left and right channels.
+
+    ```{r, out.width=".25\\linewidth"}
+    # All defaults
+    knitr::include_graphics("./images/SM2_jumpers.jpg")
+    ```
+    
+1. **Power on ARU** 
+    a. Flip `Power Source` switch to `Internal` (right side of control panel).
+
+1. **Ensure up-to-date firmware version**
+    a. As of `r format(Sys.time(), '%d %B, %Y')`, this is `R3.3.9` for the Song Meter SM2+. It will display on the second line of the LCD screen. For example:
+        
+        ```{r, comment = ""}
+        cat("2019-Jan-29 13:54:00\nSong Meter II R3.3.9")
+        ```
+    
+    b. If the firmware is current, proceed to the next step. If the firmware is out of date, download [the current version](https://drive.google.com/open?id=1LSeH4yQw6FmvIeGtlQ2ZvZ-wKF94bMBp).
+    c. Power down the ARU by flipping the `Power Source` switch to `Off`.
+    d. Copy the `CURRENT_FIRMWARE.SM2` file to the top level directory of any capacity SD card.
+    e. Safely eject this SD card, then insert into Slot A of the SM2+.
+    f. While pressing and holding the `UP` button, power on the ARU by moving the `Power Source` switch to `Internal`.
+    g. Continue holding the `UP` button until you see the message "Song Meter II Boot".
+    h. Using the `UP/DOWN` buttons if necessary, navigate to the `CURRENT_FIRMWARE desired firmware file and press `SELECT`. You should see the following messages on the LCD screen: 
+    
+        ```{r, comment = ""}
+        cat("Upgrading........\nUpgrading Complete! Press Reset to Boot")
+        ```
+    
+    i. There is no `Reset` button on the SM2+, so flip the `Power Source` switch to `Off` and then `Internal` to reboot with the new firmware.
+    j. Success will be indicated as in Step `a`.
+
+1. **Set date/time**
+    a. Press `SELECT` button and navigate to `Settings` with the `DOWN` button. With `Settings` highlighted, press `SELECT` again.
+    b. Highlight `Time and date` and press `SELECT`
+    c. Highligh the current date and time and press `SELECT`
+    d. Work through the year, month, day, hour, minutes, and seconds settings sequentially, pressing `SELECT` after each component is set. Use [time.gov](https://time.gov) to get official US time.
+    e. The date/time will be set when you press `SELECT` after setting the seconds component.
+
+1. **Set sunrise/sunset schedule to Civil time**
+    a. Navigate (using `UP/DOWN` buttons) to `Solar`, press `SELECT`, and press `UP` button until `Sunrise/set` is indicated. Press `SELECT`.
+    b. Press `BACK` button to return to `Settings` menu.
+
+1. **Set location of ARU**
+    a. Navigate to `Location` and press `SELECT`
+    b. Press `SELECT` and modify the location prefix. Use an established point identificaiton, if available (e.g., CDI4H). If not, use something logical and unique. Press `SELECT` after a trailing blank space to finish the prefix.
+    c. Navigate to `Latitude` and press `SELECT`. Set the latitude of the location of ARU deployment.
+    d. Navigate to `Longitude` and press `SELECT`. Set the longtitude of the location of ARU deployment.
+
+1. **Confirm audio settings**
+    a. Navigate to `Audio` and press `SELECT`.
+    b. Set `Sample rate` to `22050`.
+    c. Set `Channels` to `Stereo`.
+    d. Set `File Format` to `WAV`.
+    e. Set both `Gain Left` and `Gain Right` to `+ 0.0 dB`.
+    g. Navigate to `Advanced Settings` and press `SELECT`.
+    h. Set both `Dig HPF Left` and `Dig HPF Right` to `459`. They will display `fs/48` after setting.
+    i. Ensure the following settings are `Off`: `Dig LPF Left`, `Dig LPF Right`, `Trg Lvl Left`, and `Trg Lvl Right`.
+    j. Ensure `Bits` setting is `16`. The other `Trg` setting options are irrelevant provided other settings are as specified above.
+    k. Press `BACK` 3X to return to the ARU Main Menu.
+
+1. **Set ARU recording program**
+    a. Navigate to `Schedule` and press `SELECT`. This will move the cursor to the right to choose between `advanced` and `daily` schedules.
+    b. Navigate to `advanced` schedule and press `SELECT`.
+    c. Confirm the following program and, if necessary, change it by `SELECT`ing each line and navigating through the options:
+    
+        ```{r, comment = ""}
+        cat("- 01 AT TIME 00:00:00\n- 02 DO\n- 03 RECORD  02:00:00\n- 04 GOTO LINE 02 00X")
+        ```
+
+1. **Power down the ARU**
+    a. Flip `Power Source` switch to `Off`.
+    b. It is now scheduled to begin recording at the next midnight.

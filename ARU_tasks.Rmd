@@ -1,0 +1,67 @@
+---
+title: ARU Task List
+output:
+  pdf_document:
+    includes:
+      in_header: todolist.tex
+---
+
+### ARU construction
+
+\begin{todolist}
+\tightlist
+  \item install DC adapters on FoxPros
+  \item wire timers and power supplies
+  \item install weatherproof sound openings in storage boxes
+  \item attach SM2+s to plywood
+  \item test install of complete ARU/broadcast unit
+\end{todolist}
+
+### ARU programming
+\begin{todolist}
+\tightlist
+  \item SM2+ firmware upgrades
+  \item load BLRA sequence onto FoxPro
+  \item set up automatic play upon power-up
+\end{todolist}
+
+### ARU deployment
+\begin{todolist}
+\tightlist
+  \item deployment sequence creation/crossover design
+  \item timer programming SOP
+  \item[\done] FoxPro programming SOP
+  \item ARU programming SOP
+  \item ARU deployment SOP
+  \item ARU deployment datasheet and googlesheet
+  \item[\done] sunrise/sunset table
+\end{todolist}
+
+### Recognizer development
+\begin{todolist}
+\tightlist
+  \item[\done] upload references and software to G drive
+\end{todolist}
+
+### Tech training
+\begin{todolist}
+\tightlist
+  \item Raven Pro install and license
+  \item Kaleidoscope Pro install and license
+  \item R/RStudio install
+  \item check\_forecasts.R/aru\_forecast.R use
+  \item step through SOPs together
+\end{todolist}
+
+### Tech responsibilities
+\begin{todolist}
+\tightlist
+  \item read ARU/recognizer manuscripts and follow up phone call
+  \item lead marshbird survey training
+  \item coordinate with CALO?
+  \item scout CDR and CALO with team?
+  \item plan ARU deployment rotation
+  \item data storage SOP
+  \item coordinate with other recognizer work
+  \item camera trapping?
+\end{todolist}
