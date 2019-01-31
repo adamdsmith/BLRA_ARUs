@@ -46,9 +46,9 @@ aru_sequences <- function(lat, lon, start = Sys.Date() + 1,
       windows <- aru_seqs[[sq]]$window
       progs <- sapply(seq_along(days), function(i) {
         as.character(format(sun[sun$day == days[i], windows[i]], format = "%d %b %H:%M"))})
-      prog_df <- data.frame(seq_nm = sq, 
+      prog_df <- data.frame(start_date = s,
+                            seq_nm = sq, 
                             seq_id,
-                            start_date = s,
                             prog1 = progs[1],
                             prog2 = progs[2],
                             prog3 = progs[3],
