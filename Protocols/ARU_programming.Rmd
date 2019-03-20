@@ -1,5 +1,5 @@
 ---
-title: "Black Rail Song Meter 2+ (ARU) programming"
+title: "Black Rail SongMeter 2+ (ARU) programming"
 author: Adam Smith, USFWS Southeast Inventory and Monitoring (adam_d_smith@fws.gov)
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
 \fontsize{12}{14}
 \selectfont
 
-1. **Remove front panel from Song Meter 2+ (ARU)**
+1. **Remove front panel from SongMeter (ARU)**
 
 1. **Check/install batteries**
     a. The main power supply is 4 "D"-sized high-capacity rechargeable NiMH batteries. Make sure these are fully charged. The internal clock runs on 2 "AA" alkaline batteries. Replace (or at least check the voltage levels of) these prior to first deployment each year.
@@ -68,14 +68,15 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     i. There is no `Reset` button on the SM2+, so flip the `Power Source` switch to `Off` and then `Internal` to reboot with the new firmware.
     j. Success will be indicated as in Step `a`.
 
-1. **Set date/time**
-    a. Press `SELECT` button and navigate to `Settings` with the `DOWN` button. With `Settings` highlighted, press `SELECT` again.
-    b. Highlight `Time and date` and press `SELECT`
-    c. Highligh the current date and time and press `SELECT`
-    d. Work through the year, month, day, hour, minutes, and seconds settings sequentially, pressing `SELECT` after each component is set. Use [time.gov](https://time.gov) to get official US time.
-    e. The date/time will be set when you press `SELECT` after setting the seconds component.
+1. **Set date/time, if necessary**
+    a. Use [time.gov](https://time.gov) to get official US time.
+    b. Press `SELECT` button and navigate to `Settings` with the `DOWN` button. With `Settings` highlighted, press `SELECT` again.
+    c. Highlight `Time and date` and press `SELECT`
+    d. Highligh the current date and time and press `SELECT`
+    e. Work through the year, month, day, hour, minutes, and seconds settings sequentially, pressing `SELECT` after each component is set.
+    f. The date/time will be set when you press `SELECT` after setting the seconds component.
 
-1. **Set sunrise/sunset schedule to Civil time**
+1. **Set sunrise/sunset reference**
     a. Navigate (using `UP/DOWN` buttons) to `Solar`, press `SELECT`, and press `UP` button until `Sunrise/set` is indicated. Press `SELECT`.
     b. Press `BACK` button to return to `Settings` menu.
 
@@ -103,9 +104,15 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     c. Confirm the following program and, if necessary, change it by `SELECT`ing each line and navigating through the options:
     
         ```{r, comment = ""}
-        cat("- 01 AT TIME 00:00:00\n- 02 DO\n- 03 RECORD  02:00:00\n- 04 GOTO LINE 02 00X")
+        cat("- 01 AT TIME 22:00:00\n- 02 DO\n- 03 RECORD  02:00:00\n- 04 GOTO LINE 02 00X")
         ```
+        
+    d. Press `BACK` until you arrive at the ARU Main Menu.
 
 1. **Power down the ARU**
     a. Flip `Power Source` switch to `Off`.
-    b. It is now scheduled to begin recording at the next midnight.
+    
+1. **Replace front panel on SongMeter (ARU)**
+    a. The SongMeter (ARU) is now ready for [deployment](https://drive.google.com/open?id=1iHFSjoDLnAMCnjRqgh2UAGkZQQafVHLM).
+
+
