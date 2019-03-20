@@ -1,19 +1,14 @@
-aru_forecast <- function(lat, lon, key = Sys.getenv("wu_key"),
-                         max_wsp_kmh = 20, max_pop = 30) {
-  
-  stopifnot(is.character(key))
-  if (identical(key, "")) 
-    stop("Missing environmental variable 'wu_key' containing Weather Underground API key.")
-  if (!requireNamespace("rwunderground", quietly = TRUE))
-    install.packages("rwunderground", quiet = TRUE)
+aru_forecast <- function(lat, lon,
+                         max_wsp_kmh = 20, 
+                         tzone = "America/New_York") {
+
   if (!requireNamespace("lubridate", quietly = TRUE))
     install.packages("lubridate", quiet = TRUE)
   if (!requireNamespace("ggplot2", quietly = TRUE))
     install.packages("ggplot2", quiet = TRUE)
 
-  wx <- get_hourly(lat, lon, key)
-  tzone <- ifelse(grepl("EDT|EST", unique(wx$wu_tz)), "America/New_York", unique(wx$wu_tz))
-  dts <- unique(wx$date_str)[1:8] # Only want forecast one week out
+  wx <- get_hourly(lat, lon, tz = tzone)
+  dts <- unique(wx$date_str)[1:5] # Only want forecast 4 days out
   sun <- nrsmisc::get_sun(lon, lat, start = min(dts), end = max(dts),
                           direction = c("sunrise", "sunset"), out_tz = tzone)
   wx <- wx %>%
@@ -26,10 +21,14 @@ aru_forecast <- function(lat, lon, key = Sys.getenv("wu_key"),
              case_when(
                hour %in% (lubridate::hour(AM_survey) + -2:2) ~ "Sunrise",
                hour %in% (lubridate::hour(PM_survey) + -2:2) ~ "Sunset",
-               hour %in% 10:14                               ~ "Midday",
                hour %in% c(23, 0:3)                          ~ "Midnight",
                TRUE                                          ~ NA_character_),
-             levels = c("Midnight", "Sunrise", "Midday", "Sunset")),
+             levels = c("Midnight", "Sunrise", "Sunset")),
+           rain = case_when(
+             grepl("Slight Chance Rain Showers", forecast) ~ 0.5,
+             grepl("Chance Rain Showers", forecast)        ~ 0.25,
+             grepl("Showers", forecast)                    ~ 0,
+             TRUE                                          ~ 1),
            date = as.Date(ifelse(hour > 22, 
                                  as.character(as.Date(date_str) + as.difftime(1, units = "days")), 
                                  date_str))) %>%
@@ -37,7 +36,7 @@ aru_forecast <- function(lat, lon, key = Sys.getenv("wu_key"),
     group_by(date, window) %>%
     summarise(n = n(),
               wind_OK = sum(wspd_kmh <= max_wsp_kmh) / n,
-              rain_OK = sum(pop <= max_pop) / n) %>%
+              rain_OK = sum(rain) / n) %>%
     filter(n == 5) 
 
   p <- ggplot2::ggplot(wx, ggplot2::aes(date, window)) + 
@@ -59,26 +58,25 @@ aru_forecast <- function(lat, lon, key = Sys.getenv("wu_key"),
   p
 }
 
-get_hourly <- function(lat, lon, key) {
-  location <- rwunderground::set_location(lat_long = paste(lat, lon, sep = ","))
-  parsed_req <- rwunderground:::wunderground_request(
-    request_type = "hourly10day", location = location, date = NULL, key, message = FALSE)
-  rwunderground:::stop_for_error(parsed_req)
-  if (!("hourly_forecast" %in% names(parsed_req))) 
-    stop("Cannot parse hourly forecast for: ", location)
-  hourly_forecast <- parsed_req$hourly_forecast
-  tzone <- strsplit(hourly_forecast[[1]]$FCTTIME$pretty, split = " ")[[1]][3]
-  wx <- lapply(hourly_forecast, function(x) {
-    data.frame(date_str = paste(x$FCTTIME$year, x$FCTTIME$mon_padded, x$FCTTIME$mday_padded, sep = "-"),
-               wu_tz = tzone,
-               hour = as.integer(x$FCTTIME$hour),
-               tmp_c = as.numeric(x$temp[["metric"]]), 
-               rh = as.numeric(x$humidity), 
-               wspd_kmh = as.numeric(x$wspd[["english"]]), 
-               wdir = x$wdir$dir, 
-               pop = as.numeric(x$pop), 
-               mslp = as.numeric(x$mslp[["english"]]),
-               stringsAsFactors = FALSE)
-  })
-  wx <- rwunderground:::encode_NA(do.call("rbind", wx))
+get_hourly <- function(lat, lon, tz) {
+  if (!requireNamespace("httr", quietly = TRUE))
+    install.packages("httr", quiet = TRUE)
+  if (!requireNamespace("jsonlite", quietly = TRUE))
+    install.packages("jsonlite", quiet = TRUE)
+  res <- httr::GET(paste0("https://api.weather.gov/points/", lat, ",", lon))
+  httr::stop_for_status(res)
+  con <- httr::content(res, "text", encoding = "UTF-8")
+  fch <- jsonlite::fromJSON(con)$properties$forecastHourly
+  res <- httr::GET(fch)
+  httr::stop_for_status(res)
+  con <- httr::content(res, "text", encoding = "UTF-8")
+  wx <- jsonlite::fromJSON(con)$properties$periods
+  out_wx <- wx %>%
+    mutate(dt = lubridate::ymd_hms(startTime, tz = tz),
+           date = as.Date(dt, tz = tz),
+           date_str = as.character(date),
+           hour = lubridate::hour(dt),
+           wspd_kmh = round(as.integer(sub(" mph", "", windSpeed)) * 1.60934)) %>%
+    select(date, date_str, hour, wspd_kmh, forecast = shortForecast)
+  out_wx
 }
