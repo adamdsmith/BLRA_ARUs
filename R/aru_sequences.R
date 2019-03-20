@@ -24,35 +24,35 @@ aru_sequences <- function(lat, lon, start = Sys.Date() + 1,
                             out_tz = out_tz) %>%
       mutate(day = seq(5),
              midnight = as.POSIXct(paste(date_str, "00:00:00"), tz = out_tz),
-             noon = as.POSIXct(paste(date_str, "12:00:00"), tz = out_tz),
+             # noon = as.POSIXct(paste(date_str, "12:00:00"), tz = out_tz),
              sunrise = sunrise + as.difftime(30, units = "mins"),
              sunset = sunset - as.difftime(30, units = "mins")) %>%
-      select(date_str, day, midnight, sunrise, noon, sunset)
+      select(date_str, day, midnight, sunrise, sunset) # noon
     
-    aru_seq_nms <- c("SR_start", "SS_start", "Midnight_start", "Noon_start")
+    aru_seq_nms <- c("SrSsMn", "SrMnSs", "SsSrMn", "SsMnSr", "MnSrSs", "MnSsSr")
     aru_seqs <- list(
-      SR_start = list(day = c(1, 1, 3, 3),
-                      window = c("sunrise", "sunset", "midnight", "noon")),
-      SS_start = list(day = c(1, 2, 3, 4),
-                      window = c("sunset", "noon", "sunrise", "midnight")),
-      Midnight_start = list(day = c(1, 3, 4, 5),
-                            window = c("midnight", "sunrise", "noon", "sunset")),
-      Noon_start = list(day = c(1, 2, 2, 4),
-                        window = c("noon", "midnight", "sunset", "sunrise")))
+      SrSsMn = list(day = c(1,1,3), window = c("sunrise", "sunset", "midnight")),
+      SrMnSs = list(day = c(1,2,2), window = c("sunrise", "midnight", "sunset")),
+      SsSrMn = list(day = c(1,3,4), window = c("sunset", "sunrise", "midnight")),
+      SsMnSr = list(day = c(1,3,4), window = c("sunset", "midnight", "sunrise")),
+      MnSrSs = list(day = c(1,2,2), window = c("midnight", "sunrise", "sunset")),
+      MnSsSr = list(day = c(1,1,3), window = c("midnight", "sunset", "sunrise")))
     
     tmp <- lapply(aru_seq_nms, function(sq) {
       seq_id <- which(aru_seq_nms == sq)
       days <- aru_seqs[[sq]]$day
       windows <- aru_seqs[[sq]]$window
       progs <- sapply(seq_along(days), function(i) {
-        as.character(format(sun[sun$day == days[i], windows[i]], format = "%d %b %H:%M"))})
+        as.character(format(sun[sun$day == days[i], windows[i]], format = "%a %H:%M (%d %b)"))})
       prog_df <- data.frame(start_date = s,
+                            day_of_week = format(s, "%A"),
                             seq_nm = sq, 
                             seq_id,
                             prog1 = progs[1],
                             prog2 = progs[2],
                             prog3 = progs[3],
-                            prog4 = progs[4], stringsAsFactors = FALSE)
+                            # prog4 = progs[4], 
+                            stringsAsFactors = FALSE)
     })
     tmp <- bind_rows(tmp)
   })
