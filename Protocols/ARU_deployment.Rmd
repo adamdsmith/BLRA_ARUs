@@ -23,51 +23,48 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
 \fontsize{12}{14}
 \selectfont
 
-## Preparatory work
+# Preparatory work
 
 1. **Program the FoxPro NX4 game caller according to the [Black Rail FoxPro NX4 game caller programming SOP](https://drive.google.com/open?id=1xGVY6jRZ63alt0I-0p5kayuK_gv3iKme).** 
-    a. This will need to be done only once at the beginning of the season.
+    a. This will need to be completed or confirmed once at the beginning of the season.
 
-1. **Program the SongMeter ARU according to the [Black Rail Song Meter 2+ (ARU) programming](https://drive.google.com/open?id=1LFW3eHGa8eNBBsS4xyqox6vrlnHqznlE).**
+1. **Program the SongMeter ARU according to the [Black Rail SongMeter 2+ (ARU) programming](https://drive.google.com/open?id=1LFW3eHGa8eNBBsS4xyqox6vrlnHqznlE).**
 
 1. **Program the remote broadcaster timer according to the [Black Rail remote broadcast unit timer programming SOP](https://drive.google.com/open?id=1INh3m2WPEIpn3IQthM1Y1zChPl1TFCXU)**
 
 1. **Charge battery pack, if necessary.**
     a. Charge the 12V pack using an appropriate (12V/500mA) AC/DC adapter. Charge with the toggle switch on the battery pack set to `I` (`I`nput). The battery pack charges \underline{only} on `I` (`I`nput). If using the original AC/DC charging adapter, a complete charge is indicated by a green LED on the charger (a red LED indicates the unit is charging).
+    b. Disconnect from the charger, and confirm a fully-charged battery pack by a complete row of green LEDs on the battery pack. Flip the toggle switch on the battery pack to `O` (`O`ff) until deployment. 
 
-    ```{r, echo=FALSE, out.width = "3.75in"}
-    knitr::include_graphics("./images/battery_pack.jpg")
-    ```
-
-1. **Prep the remote broadcast unit for field deployment**
-    a. We have labeled the two barrel jacks coming from the timer to avoid confusion. Connect the timer to the charged 12V battery pack via the barrel jack labeled `12V`. Flip the toggle switch on the battery pack to `O` (`O`utput). 
-    b. Connect the timer to the FoxPro NX4 game caller via the 12V barrel jack labeled `BC` (for broadcast).
+1. **Connect battery pack to timer and FoxPro NX4 for field deployment**
+    a. The timer connects to the 12V battery pack using the red/black barrel jack cable. This cable is labeled `12V` on the timer. 
+    b. The timer connects to the FoxPro NX4 game caller using the solid black barrel jack cable. This cable is labeled `BC` (for broadcast) on the timer.
     c. Center the FoxPro NX4 game caller in the case. The forward and rear speakers should align well with the openings on each end of the enclosure.
-    d. Confirm volume and speaker settings on the FoxPro NX4 game caller. Both speakers of the game caller should be operational in open marsh and only the forward speaker operational when broadcasting from the edge of open water or upland habitat.
-    e. Carefully close and latch the case, ensuring the lid aligns well with, and sits snugly on, the case bottom. 
+    d. Carefully close and latch the case, ensuring the lid aligns with and sits snugly on the case bottom. 
 
-## Field deployment
+# Field deployment
 
 1. **Install the T-post, with attached SongMeter ARU, at the sampling location**
     a. When surrounded completely by marsh, the front speaker of the game caller should face magnetic North. This also means the microphones of the SongMeter (ARU) will align with magnetic North and South.
     b. When located on the edge of open water or upland habitat, the front speaker of the game caller should face the center of appropriate marsh habitat.
 
 1. **Mount and secure the remote broadcast unit case to the T-post**
-    a. Open the remote broadcast unit case and confirm solid connections between timer and 12V battery pack and FoxPro NX4 game caller.
-    b. Confirm the timer is in automatic mode. If `AUTO` is indicated along the bottom of the display, proceed to the next step. If a \manual{} icon is indicated along the bottom of the display, press the `MANUAL` button once to put the timer in automatic mode and display `AUTO`.
-    c. Record the FoxPro NX4 unit number on the deployment data sheet.
-    d. Carefully close and latch the case, ensuring the lid aligns well with, and sits snugly on, the case bottom.
-    e. Secure the unit using the security cable and combination lock.
-    f. Record the orientation of the game caller on the deployment data sheet.
+    a. Open the remote broadcast unit case and confirm expected and solid cable connections between timer and 12V battery pack and FoxPro NX4 game caller.
+    b. Flip the toggle switch on the battery pack to `I` to make power available to the timer and FoxPro NX4. Confirm a fully-charged battery pack by a complete row of green LEDs on the battery pack.
+    c. Confirm the timer is in automatic mode. If `AUTO` is indicated along the bottom of the display, proceed to the next step. If a \manual{} icon is indicated along the bottom of the display, press the `MANUAL` button once to put the timer in automatic mode and display `AUTO`.
+    d. Confirm volume and speaker settings on the FoxPro NX4 game caller. Both speakers of the game caller should be operational in open marsh and only the forward speaker operational when broadcasting from the edge of open water or upland habitat.
+    e. Record the FoxPro NX4 unit number on the deployment data sheet.
+    f. Carefully close and latch the case, ensuring the lid aligns well with, and sits snugly on, the case bottom.
+    g. Secure the unit using the security cable and combination lock.
+    h. Record the orientation of the game caller on the deployment data sheet.
 
 1. **Install microphones**
-    a. Attach microphones directly to the left and right microphone input connectors on the Song Meter. The connectors are keyed. Thus, the microphone should first be pushed into the connector when oriented correctly, and then locked into place by rotating the locking ring on the microphone clockwise. 
-    b. These microphones are fragile---they should be removed during transport to and from the field.
+    a. Attach microphones directly to the left and right microphone input connectors on the Song Meter. The connectors are keyed. Thus, the microphone should first be pushed into the connector when oriented correctly, and then locked into place by rotating the locking ring on the microphone clockwise. The microphones are fragile, and should be removed during transport to and from the field.
 
 1. **Power up the SongMeter ARU**
     a. Remove front panel from SongMeter (ARU).
     b. Flip `Power Source` switch to `Internal`.
-    c. If programmed correctly, it will begin recording at 10 PM on the current day.
+    c. If programmed correctly, it will indicate the unit is going to sleep until it begins recording at 10 PM on the current day.
     d. Replace front panel on SongMeter (ARU).
     e. Ensure rubber rain flap is covering top seam of the SongMeter (ARU).
 
