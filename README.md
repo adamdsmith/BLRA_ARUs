@@ -4,8 +4,7 @@
 - [X] install DC adapters on FoxPros
 - [ ] wire timers and power supplies
 - [ ] install weatherproof sound openings in storage boxes
-- [ ] attach SM2+s to plywood
-- [ ] test install of complete ARU/broadcast unit
+- [ ] cut plywood and mount SM2+s
 
 ### ARU programming
 
@@ -14,6 +13,7 @@
 - [X] set up automatic play upon power-up
 
 ### ARU deployment
+
 - [X] deployment sequence creation/crossover design
 - [X] timer programming SOP
 - [X] FoxPro programming SOP
@@ -24,6 +24,7 @@
 - [ ] data storage SOP
 
 ### Recognizer development
+
 - [X] upload references and software to G drive
 
 ### Tech training
@@ -37,6 +38,7 @@
 
 ### Tech responsibilities
 
+- [ ] test install of complete ARU/broadcast unit
 - [ ] test all NX4/remote broadcast units
 - [ ] loudness testing
 - [ ] confirm aerial imagery on three GPS
