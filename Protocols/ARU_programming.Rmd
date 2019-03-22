@@ -53,7 +53,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
         cat("2019-Jan-29 13:54:00\nSong Meter II R3.3.9")
         ```
     
-    b. If the firmware is current, proceed to the next step. If the firmware is out of date, download [the current version](https://drive.google.com/open?id=1LSeH4yQw6FmvIeGtlQ2ZvZ-wKF94bMBp).
+    b. If the firmware is current, proceed to the next step. If the firmware is out of date, download [the current version](https://drive.google.com/uc?export=download&id=1LSeH4yQw6FmvIeGtlQ2ZvZ-wKF94bMBp).
     c. Power down the ARU by flipping the `Power Source` switch to `Off`.
     d. Copy the `CURRENT_FIRMWARE.SM2` file to the top level directory of any capacity SD card.
     e. Safely eject this SD card, then insert into Slot A of the SM2+.
@@ -69,7 +69,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     j. Success will be indicated as in Step `a`.
 
 1. **Set date/time, if necessary**
-    a. Use [time.gov](https://time.gov) to get official US time.
+    a. Visit [time.gov](https://time.gov) to get official US time.
     b. Press `SELECT` button and navigate to `Settings` with the `DOWN` button. With `Settings` highlighted, press `SELECT` again.
     c. Highlight `Time and date` and press `SELECT`
     d. Highligh the current date and time and press `SELECT`
@@ -80,11 +80,14 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     a. Navigate (using `UP/DOWN` buttons) to `Solar`, press `SELECT`, and press `UP` button until `Sunrise/set` is indicated. Press `SELECT`.
     b. Press `BACK` button to return to `Settings` menu.
 
-1. **Set location of ARU**
+1. **Set location prefix and coordinates of ARU**
     a. Navigate to `Location` and press `SELECT`
-    b. Press `SELECT` and modify the location prefix. Use an established point identificaiton, if available (e.g., CDI4H). If not, use something logical and unique. Press `SELECT` after a trailing blank space to finish the prefix.
-    c. Navigate to `Latitude` and press `SELECT`. Set the latitude of the location of ARU deployment.
-    d. Navigate to `Longitude` and press `SELECT`. Set the longtitude of the location of ARU deployment.
+    b. Press `SELECT` and modify the location prefix. 
+    c. Set the location prefix using the following convention: \<ARU ID\>-\<established point ID\>. 
+        - For example, the prefix for audio collected on Cedar Island NWR at point `CDR4H` with SongMeter `IM06` would be `IM06-CDR4H`. Only 12 alphanumeric spaces are available, so abbreviating long, historical location names may be necessary.
+    d. If the location prefix is less than 12 alphanumeric characters, enter a trailing blank space and press `SELECT` to finish the location prefix.
+    e. Navigate to `Latitude` and press `SELECT`. Set the latitude of the location of ARU deployment.
+    f. Navigate to `Longitude` and press `SELECT`. Set the longtitude of the location of ARU deployment.
 
 1. **Confirm audio settings**
     a. Navigate to `Audio` and press `SELECT`.
