@@ -68,7 +68,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     d. Replace front panel on SongMeter (ARU).
     e. Ensure rubber rain flap is covering top seam of the SongMeter (ARU).
 
-1. **Record the ARU (SM2) unit number, broadcast start date, sequence, and site identifcation information on deployment data sheet**
+1. **Record the ARU (SM2) unit number, broadcast start date, sequence, and site identification information on deployment data sheet**
 
 1. **Return for human survey at some point...**
 

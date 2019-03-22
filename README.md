@@ -21,7 +21,7 @@
 - [ ] ARU deployment SOP
 - [X] ARU deployment googlesheet
 - [X] ARU programming calendar
-- [ ] data storage SOP
+- [X] data storage SOP
 
 ### Recognizer development
 
@@ -54,3 +54,4 @@
 - [ ] plan ARU deployment rotation
 - [ ] coordinate with other recognizer work
 - [ ] camera trapping
+- [ ] draft camera trapping SOP
