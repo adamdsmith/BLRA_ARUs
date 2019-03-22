@@ -16,6 +16,7 @@ header-includes:
   - \usepackage{scalerel}
   - \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=.35pt] (char) {#1};}}
   - \newcommand{\myclock}{\scalerel*{\includegraphics{images/clock}}{B}}
+  - \newcommand{\locked}{\scalerel*{\includegraphics{images/locked}}{B}}
 ---
 
 ```{r setup, include=FALSE}
@@ -29,7 +30,8 @@ Note, the following directions apply to the [FAVOLCANO CN101 DC 12V 16A Digital 
 
 1. **Confirm or update the day of the week and time of the timer.**
     a. Visit [time.gov](https://time.gov/) for current official time.
-    b. While holding the \myclock{} button, use the `D+` button to set the current day of the week day, the `H+` button to set the current hour, and the `M+` button to set the current minute, as necessary. If no button is pressed for 2 seconds while holding the \myclock{} button, you will need to release the \myclock{} button and push/hold it again to further adjust the day of week or time.
+    b. If the timer is locked (i.e., there is a \locked{} icon in the lower left corner of the display), press the `C/R` button 4X.
+    c. While holding the \myclock{} button, use the `D+` button to set the current day of the week day, the `H+` button to set the current hour, and the `M+` button to set the current minute, as necessary. If no button is pressed for 2 seconds while holding the \myclock{} button, you will need to release the \myclock{} button and push/hold it again to further adjust the day of week or time.
     
 
 1. **Set the remote broadcast unit program.**
