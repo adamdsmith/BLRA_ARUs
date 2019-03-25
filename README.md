@@ -3,12 +3,12 @@
 
 - [X] install DC adapters on FoxPros
 - [ ] wire timers and power supplies
-- [ ] install weatherproof sound openings in storage boxes
+- [X] install weatherproof sound openings in storage boxes
 - [ ] cut plywood and mount SM2+s
 
 ### ARU programming
 
-- [ ] SM2+ firmware upgrades
+- [X] SM2+ firmware upgrades
 - [X] load BLRA sequence onto FoxPro
 - [X] set up automatic play upon power-up
 
@@ -45,7 +45,7 @@
 - [ ] confirm CDR and CALO points on three GPS
 - [ ] identify points with BLRA observed on/near Alligator River and Swanquarter NWRs
 - [ ] ARU deployment datasheets
-- [ ] BLRA survey and veg datasheets and binder
+- [X] BLRA survey and veg datasheets and binder
 - [ ] BLRA survey equipment inventory
 - [ ] read ARU/recognizer manuscripts and follow up phone call
 - [ ] lead marshbird survey training
