@@ -44,32 +44,27 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
 
 # Field deployment
 
-1. **Install the T-post, with attached SongMeter ARU, at the sampling location**
-    a. When surrounded completely by marsh, the front speaker of the game caller should face magnetic North. This also means the microphones of the SongMeter (ARU) will align with magnetic North and South.
-    b. When located on the edge of open water or upland habitat, the front speaker of the game caller should face the center of appropriate marsh habitat.
-
-1. **Mount and secure the remote broadcast unit case to the T-post**
+1. **Attach SongMeter ARU to T-post using security nuts**
+1. **Mount and secure the remote broadcast unit case to the T-post with wing nuts**
     a. Open the remote broadcast unit case and confirm expected and solid cable connections between timer and 12V battery pack and FoxPro NX4 game caller.
     b. Flip the toggle switch on the battery pack to `I` to make power available to the timer and FoxPro NX4. Confirm a fully-charged battery pack by a complete row of green LEDs on the battery pack.
     c. Confirm the timer is in automatic mode. If `AUTO` is indicated along the bottom of the display, proceed to the next step. If a \manual{} icon is indicated along the bottom of the display, press the `MANUAL` button once to put the timer in automatic mode and display `AUTO`.
     d. Confirm volume and speaker settings on the FoxPro NX4 game caller. Both speakers of the game caller should be operational in open marsh and only the forward speaker operational when broadcasting from the edge of open water or upland habitat.
     e. Record the FoxPro NX4 unit number on the deployment data sheet.
     f. Carefully close and latch the case, ensuring the lid aligns well with, and sits snugly on, the case bottom.
-    g. Secure the unit using the security cable and combination lock.
-    h. Record the orientation of the game caller on the deployment data sheet.
-
+    g. Lock the unit to the T-post using the security cable and combination lock.
+1. **Install the T-post**
+    a. When surrounded completely by marsh, the front speaker of the game caller should face magnetic North. This also means the microphones of the SongMeter (ARU) will align with magnetic North and South.
+    b. When located on the edge of open water or upland habitat, the front speaker of the game caller should face the center of appropriate marsh habitat.
+    c. Install to a sufficient depth to ensure stability. The broadcast unit should be 3 - 4' above ground level.
 1. **Install microphones**
     a. Attach microphones directly to the left and right microphone input connectors on the Song Meter. The connectors are keyed. Thus, the microphone should first be pushed into the connector when oriented correctly, and then locked into place by rotating the locking ring on the microphone clockwise. The microphones are fragile, and should be removed during transport to and from the field.
-
 1. **Power up the SongMeter ARU**
     a. Remove front panel from SongMeter (ARU).
     b. Flip `Power Source` switch to `Internal`.
-    c. If programmed correctly, it will indicate the unit is going to sleep until it begins recording at 10 PM on the current day.
+    c. If programmed correctly, it will indicate the unit is going to sleep until it begins recording at 30 minutes after sunset on the current day.
     d. Replace front panel on SongMeter (ARU).
     e. Ensure rubber rain flap is covering top seam of the SongMeter (ARU).
-
-1. **Record the ARU (SM2) unit number, broadcast start date, sequence, and site identification information on deployment data sheet**
-
-1. **Return for human survey at some point...**
-
-    
+1. **Record relevant data on the ARU deployment data sheet**
+    a. These include the ARU (SM2+), FoxPro NX4, and site identification, FoxPro NX4 orientation, deployment and broadcast start dates, and broadcast sequence.
+    b. Other information on the ARU deployment data sheet will be completed after ARU (SM2+) retrieval and recording review.

@@ -27,7 +27,7 @@ seqs <- aru_sequences(34.9417, -76.34, start = survdates2019) %>%
   select(`Start date` = start_date, Day = day_of_week, Seq = seq_id, `Seq name` = seq_nm,
          `Program 1` = prog1, `Program 2` = prog2, `Program 3` = prog3)
 tab <- knitr::kable(seqs, booktabs = TRUE, longtab = TRUE, linesep = "", 
-  caption = "ARU programming sequences by start date. Times are adjusted by 30 minutes relative to sunrise and sunset according to the protocol.")
+  caption = "ARU programming sequences by broadcast start date. Broadcast start times have been adjusted by 30 minutes relative to sunrise and sunset according to the protocol.")
 kable_styling(tab, full_width = FALSE, latex_options = c("striped", "repeat_header"))  #%>%
 #  row_spec(0, align = "c")
 ```

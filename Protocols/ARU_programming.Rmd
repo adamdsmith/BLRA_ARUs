@@ -104,12 +104,12 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
 1. **Set ARU recording program**
     a. Navigate to `Schedule` and press `SELECT`. This will move the cursor to the right to choose between `advanced` and `daily` schedules.
     b. Navigate to `advanced` schedule and press `SELECT`.
-    c. Confirm the following program and, if necessary, change it by `SELECT`ing each line and navigating through the options:
-    
+    c. Confirm the following program and, if necessary, change it by `SELECT`ing each line and navigating through the options, one of which is `<Delete>` to remove a line:
+
         ```{r, comment = ""}
-        cat("- 01 AT TIME 22:00:00\n- 02 DO\n- 03 RECORD  02:00:00\n- 04 GOTO LINE 02 00X")
+        cat("- 01 AT SSET - 00:30:00\n- 02 DO\n- 03 RECORD  02:00:00\n- 04 GOTO LINE 02 00X")
         ```
-        
+
     d. Press `BACK` until you arrive at the ARU Main Menu.
 
 1. **Power down the ARU**
