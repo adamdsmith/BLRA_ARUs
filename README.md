@@ -29,11 +29,11 @@
 
 ### Tech training
 
-- [ ] Raven Pro install and license
-- [ ] Kaleidoscope Pro install and license
-- [ ] R/RStudio install
-- [ ] Audacity install
-- [ ] check\_forecasts.R/aru\_forecast.R use
+- [X] Raven Pro install and license
+- [X] Kaleidoscope Pro install and license
+- [X] R/RStudio install
+- [X] Audacity install
+- [X] aru\_forecast.R use
 - [ ] step through SOPs together
 
 ### Tech responsibilities
