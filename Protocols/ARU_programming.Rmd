@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     a. The main power supply is 4 "D"-sized high-capacity rechargeable NiMH batteries. Make sure these are fully charged. The internal clock runs on 2 "AA" alkaline batteries. Replace (or at least check the voltage levels of) these prior to first deployment each year.
 
 1. **Install flash cards**
-    a. Insert 1 - 4 SDHC cards (16, 32, 64, or 128 GB; Class 10), filling from Slot A - D as needed.
+    a. Insert 1 - 4 SDHC or SDXC cards (16, 32, 64, or 128 GB; Class 10), filling from Slot A - D as needed. If using an SDXC card, it will likely need to be reformatted from the default `exFAT` file system to the `FAT32` file system. Seek online assistance relevant to your operating system.
     
     ```{r, out.width=".75\\linewidth"}
     # All defaults
@@ -88,6 +88,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     d. If the location prefix is less than 12 alphanumeric characters, enter a trailing blank space and press `SELECT` to finish the location prefix.
     e. Navigate to `Latitude` and press `SELECT`. Set the latitude of the location of ARU deployment.
     f. Navigate to `Longitude` and press `SELECT`. Set the longtitude of the location of ARU deployment.
+    g. Navigate to `Timezone` and press `SELECT`. Set the timezone of your location relevant to UTC. All of our ARUs will operate under Eastern Daylight Time, which is `UTC - 4:00`.
 
 1. **Confirm audio settings**
     a. Navigate to `Audio` and press `SELECT`.
