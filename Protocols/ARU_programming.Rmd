@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     a. The main power supply is 4 "D"-sized high-capacity rechargeable NiMH batteries. Make sure these are fully charged. The internal clock runs on 2 "AA" alkaline batteries. Replace (or at least check the voltage levels of) these prior to first deployment each year.
 
 1. **Install flash cards**
-    a. Insert 1 - 4 SDHC or SDXC cards (16, 32, 64, or 128 GB; Class 10), filling from Slot A - D as needed. If using an SDXC card, it will likely need to be reformatted from the default `exFAT` file system to the `FAT32` file system. Seek online assistance relevant to your operating system.
+    a. Insert 1 - 4 SDHC cards (16 or 32 GB; Class 10), filling from Slot A - D as needed. We have not had good luck using SDXC cards with this unit, though the SongMeter manual suggests it is possible to use them after reformatting the cards to a `FAT32` file system. Use at your own risk.
     
     ```{r, out.width=".75\\linewidth"}
     # All defaults
@@ -83,8 +83,8 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
 1. **Set location prefix and coordinates of ARU**
     a. Navigate to `Location` and press `SELECT`
     b. Press `SELECT` and modify the location prefix. 
-    c. Set the location prefix using the following convention: \<ARU ID\>-\<established point ID\>. 
-        - For example, the prefix for audio collected on Cedar Island NWR at point `CDR4H` with SongMeter `IM06` would be `IM06-CDR4H`. Only 12 alphanumeric spaces are available, so abbreviating long, historical location names may be necessary.
+    c. Set the location prefix using the following convention: \<ARU ID\>-\<survey point ID\>. 
+        - For example, the prefix for audio collected on Cedar Island NWR at point `CDR4H` with SongMeter `IM06` would be `IM06-CDR4H`. Only 12 alphanumeric spaces are available, so abbreviating long, historical location names may be necessary (e.g., `PTAILLIE114` becomes `PT114`).
     d. If the location prefix is less than 12 alphanumeric characters, enter a trailing blank space and press `SELECT` to finish the location prefix.
     e. Navigate to `Latitude` and press `SELECT`. Set the latitude of the location of ARU deployment.
     f. Navigate to `Longitude` and press `SELECT`. Set the longtitude of the location of ARU deployment.
@@ -102,7 +102,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     j. Ensure `Bits` setting is `16`. The other `Trg` setting options are irrelevant provided other settings are as specified above.
     k. Press `BACK` 3X to return to the ARU Main Menu.
 
-1. **Set ARU recording program**
+1. **Confirm ARU recording program**
     a. Navigate to `Schedule` and press `SELECT`. This will move the cursor to the right to choose between `advanced` and `daily` schedules.
     b. Navigate to `advanced` schedule and press `SELECT`.
     c. Confirm the following program and, if necessary, change it by `SELECT`ing each line and navigating through the options, one of which is `<Delete>` to remove a line:
