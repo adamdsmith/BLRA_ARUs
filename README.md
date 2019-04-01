@@ -4,7 +4,7 @@
 - [X] install DC adapters on FoxPros
 - [ ] wire timers and power supplies
 - [X] install weatherproof sound openings in storage boxes
-- [ ] cut plywood and mount SM2+s
+- [X] cut plywood and mount SM2+s
 
 ### ARU programming
 
@@ -18,7 +18,7 @@
 - [X] timer programming SOP
 - [X] FoxPro programming SOP
 - [X] ARU programming SOP
-- [ ] ARU deployment SOP
+- [X] ARU deployment SOP
 - [X] ARU deployment googlesheet
 - [X] ARU programming calendar
 - [X] data storage SOP
@@ -34,19 +34,19 @@
 - [X] R/RStudio install
 - [X] Audacity install
 - [X] aru\_forecast.R use
-- [ ] step through SOPs together
+- [X] step through SOPs together
 
 ### Tech responsibilities
 
-- [ ] test install of complete ARU/broadcast unit
-- [ ] test all NX4/remote broadcast units
-- [ ] loudness testing
-- [ ] confirm aerial imagery on three GPS
-- [ ] confirm CDR and CALO points on three GPS
+- [X] test install of complete ARU/broadcast unit
+- [X] test all NX4/remote broadcast units
+- [X] loudness testing
+- [X] confirm aerial imagery on three GPS
+- [X] confirm CDR and CALO points on three GPS
 - [ ] identify points with BLRA observed on/near Alligator River and Swanquarter NWRs
-- [ ] ARU deployment datasheets
+- [X] ARU deployment datasheets
 - [X] BLRA survey and veg datasheets and binder
-- [ ] BLRA survey equipment inventory
+- [X] BLRA survey equipment inventory
 - [ ] read ARU/recognizer manuscripts and follow up phone call
 - [ ] lead marshbird survey training
 - [ ] coordinate with CALO?
