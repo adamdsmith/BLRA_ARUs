@@ -28,7 +28,8 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     a. The main power supply is 4 "D"-sized high-capacity rechargeable NiMH batteries. Make sure these are fully charged. The internal clock runs on 2 "AA" alkaline batteries. Replace (or at least check the voltage levels of) these prior to first deployment each year.
 
 1. **Install flash cards**
-    a. Insert 1 - 4 SDHC cards (16 or 32 GB; Class 10), filling from Slot A - D as needed. We have not had good luck using SDXC cards with this unit, though the SongMeter manual suggests it is possible to use them after reformatting the cards to a `FAT32` file system. Use at your own risk.
+    a. Insert 1 - 4 SDHC cards (16 or 32 GB; Class 10), filling from Slot A - D as needed. We have not had good luck using SDXC cards with this unit, though the SongMeter manual suggests it is possible to use them after reformatting the cards to a `FAT32` file system. Use at your own risk. 
+    b. Make sure SD cards are fully inserted and secure in their Slot. They can occasionally appear installed but not be fully inserted.
     
     ```{r, out.width=".75\\linewidth"}
     # All defaults
