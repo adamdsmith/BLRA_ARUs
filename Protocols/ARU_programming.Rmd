@@ -37,7 +37,10 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     ```
 
 1. **Check bias and gain jumper settings**
-    a. Ensure bias and gain jumpers (left side of the control panel) match the following figure on both left and right channels.
+    a. Ensure bias and gain jumpers (left side of the control panel) match the following figure on both left and right channels. For users with newer SongMeter ARUs, these settings do the following:
+    
+        1. Set a 180Hz two-pole high-pass filter. On SongMeter 3 and 4, the nearest equivalent is 220Hz.
+        2. Set the microphone pre-amplifier gain to +48dB. See the SongMeter 3 or 4 manual regarding matching this setting with those units.
 
     ```{r, out.width=".25\\linewidth"}
     # All defaults
