@@ -1,6 +1,8 @@
 ---
 title: "Black Rail SongMeter 2+ ARU/Remote Broadcast deployment"
-author: Adam Smith, USFWS Southeast Inventory and Monitoring (adam_d_smith@fws.gov)
+author: 
+- Adam Smith, USFWS Southeast Inventory and Monitoring (adam_d_smith@fws.gov)
+- Christy Hand, South Carolina DNR (handc@dnr.sc.gov)
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 geometry: margin=0.75in
