@@ -19,6 +19,7 @@ header-includes:
   - \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=.35pt] (char) {#1};}}
   - \newcommand{\myclock}{\scalerel*{\includegraphics{images/clock}}{B}}
   - \newcommand{\locked}{\scalerel*{\includegraphics{images/locked}}{B}}
+  - \newcommand{\manual}{\scalerel*{\includegraphics{images/nobulb}}{B}}
 ---
 
 ```{r setup, include=FALSE}
@@ -34,18 +35,22 @@ Note, the following directions apply to the [FAVOLCANO CN101 DC 12V 16A Digital 
     a. Visit [time.gov](https://time.gov/) for current official time.
     b. If the timer is locked (i.e., there is a \locked{} icon in the lower left corner of the display), press the `C/R` button 4X.
     c. While holding the \myclock{} button, use the `D+` button to set the current day of the week day, the `H+` button to set the current hour, and the `M+` button to set the current minute, as necessary. If no button is pressed for 2 seconds while holding the \myclock{} button, you will need to release the \myclock{} button and push/hold it again to further adjust the day of week or time.
+    
+1. **Put the timer into manual mode.**
+    a. If a \manual{} icon is indicated along the bottom of the display, proceed to the next step.
+    b. If `AUTO` is indicated along the bottom of the display, press the `MANUAL` button once to put the timer into manual mode and display the \manual{} icon along the bottom of the display.
 
 1. **Set the remote broadcast unit program.**
     a. Determine the broadcast sequence to be programmed using the [BLRA Remote Broadcast Unit Sequence List](https://docs.google.com/spreadsheets/d/1KYLsfPsZMw3fH8PDqI03tctwRroWYiiYVCUiZZ_uTCg/edit?usp=sharing).
-    b. Every sequence available in step 2a requires scheduling the `ON/OFF` times for \underline{three} programs. They \underline{do not} necessarily occur on consecutive days. When programming a broadcast sequence, pay careful attention to the days of the week and the `ON/OFF` timing of the three programs.
+    b. Every sequence available in step 3a requires scheduling the `ON/OFF` times for \underline{three} programs. They \underline{do not} necessarily occur on consecutive days. When programming a broadcast sequence, pay careful attention to the days of the week and the `ON/OFF` timing of the three programs.
     c. Consult the [ARU programming calendar](https://drive.google.com/open?id=1uYrN7_upLw7_05BjhedVMq4-FEvroqcR) for the scheduled `ON` times of the three programs associated with the relevant sequence and start date of the broadcast sequence. Ensure you are using the programming schedule associated with the \underline{start date of the broadcast}, not necessarily the current date.
     d. Programming begins by setting the `ON` time for the first program (i.e., `Program 1`). Press the \circled{P} button to advance to the programming interface. The timer display should indicate `ON` and the number `1`.
     e. Repeatedly press the `D+` button until the correct day of the week for `Program 1` is indicated.
     f. Set the appropriate `ON` time for the program using the `H+` and `M+` buttons.
-    g. Press the \circled{P} button to advance and set the `OFF` time for `Program 1`, using an approach similar to that described in steps 2e - 2f. Set the `OFF` time for \underline{13 minutes after} the `ON` time.
+    g. Press the \circled{P} button to advance and set the `OFF` time for `Program 1`, using an approach similar to that described in steps 3e - 3f. Set the `OFF` time for \underline{13 minutes after} the `ON` time.
     h. Press the \circled{P} button to advance to the `ON` time for `Program 2`. The timer display should indicate `ON` and the number `2`.
-    i. Repeat steps 2e - 2g to set the `ON` and `OFF` day of the week and times for `Program 2`.
-    j. Repeat steps 2h - 2i to set the `ON` and `OFF` day of the week and times for `Program 3`.
+    i. Repeat steps 3e - 3g to set the `ON` and `OFF` day of the week and times for `Program 2`.
+    j. Repeat steps 3h - 3i to set the `ON` and `OFF` day of the week and times for `Program 3`.
     k. When finished setting the `OFF` time for `Program 3`, press the \myclock{} button to exit the programming interface.
     l. Repeatedly press \circled{P} to cycle through and double-check the days and `ON/OFF` times of the three programs against the ARU programming calendar.
-    m. Repeat step 2l. Seriously...
+    m. Repeat step 3l. Seriously...

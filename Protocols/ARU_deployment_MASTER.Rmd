@@ -58,7 +58,7 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
 1. **Mount and secure the remote broadcast unit case to the T-post with wing nuts**
     a. Open the remote broadcast unit case and confirm cable connections are solid and as expected between the timer and 12V battery pack and FoxPro NX4 game caller.
     b. Flip the toggle switch on the battery pack to `I` to make power available to the timer and FoxPro NX4. Confirm a fully-charged battery pack by a complete row of green LEDs on the battery pack.
-    c. Confirm the timer is in automatic mode. If `AUTO` is indicated along the bottom of the display, proceed to the next step. If a \manual{} icon is indicated along the bottom of the display, press the `MANUAL` button once to put the timer in automatic mode and display `AUTO`.
+    c. Put the timer into automatic mode. A \manual{} icon should be indicated along the bottom of the display. If so, press the `MANUAL` button once to put the timer in automatic mode and display `AUTO` along the bottom of the display. If the unit is already in `AUTO` mode, press the `MANUAL` button twice to pass through `MANUAL` mode and back into `AUTO` mode. This step prevents a glitch in some timer units whereby the broadcaster turns on when battery pack power is first supplied.
     d. Confirm volume and speaker settings on the FoxPro NX4 game caller. Both speakers of the game caller should be operational in open marsh and only the forward speaker operational when broadcasting from the edge of open water or upland habitat.
     e. Record the FoxPro NX4 unit number on the deployment data sheet.
     f. Carefully close and latch the case, ensuring the lid aligns well with, and fits snugly on, the case bottom.
