@@ -76,7 +76,7 @@ For example, consider the first two audio files generated during an ARU survey a
     h. Press `Process files` (lower right). This can take a while, particularly if using only a few `compute resources`.
 
 1. Copy the approximately 60 - 100 `.wav` files generated in the `YYYY_ARU_files` directory on the primary external hard drive and copy them to the identically-named directory on the backup external hard drive.
-    a. Two or three additional files will be created in the process, with names similar to `log.txt`, `meta.csv`, and `settings.ini`. These can be deleted if the channel splitting process proceded smoothly. The `log.txt` file can be useful in identifying problem files if the process fails.
+    a. Two to four additional files may be created in the process, with names similar to `log.txt`, `meta.csv`, `db-batch.wdb.bak1`, and `settings.ini`. These can be deleted if the channel splitting process proceded smoothly. The `log.txt` file can be useful in identifying problem files if the process fails.
 
 1. Copy any  \<ARU ID\>-\<survey point ID\>-SENSOR* files in the `Data` directory on the SD card to the `YYYY_ARU_files` directory on the primary and backup external hard drives.
 
