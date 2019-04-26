@@ -2,7 +2,7 @@
 ### ARU construction
 
 - [X] install DC adapters on FoxPros
-- [ ] wire timers and power supplies
+- [X] wire timers and power supplies
 - [X] install weatherproof sound openings in storage boxes
 - [X] cut plywood and mount SM2+s
 
@@ -43,15 +43,15 @@
 - [X] loudness testing
 - [X] confirm aerial imagery on three GPS
 - [X] confirm CDR and CALO points on three GPS
-- [ ] identify points with BLRA observed on/near Alligator River and Swanquarter NWRs
+- [X] identify points with BLRA observed on/near Alligator River and Swanquarter NWRs
 - [X] ARU deployment datasheets
 - [X] BLRA survey and veg datasheets and binder
 - [X] BLRA survey equipment inventory
 - [ ] read ARU/recognizer manuscripts and follow up phone call
-- [ ] lead marshbird survey training
-- [ ] coordinate with CALO?
-- [ ] scout CDR and CALO with team?
+- [X] lead marshbird survey training
+- [X] coordinate with CALO
+- [X] scout CDR and CALO with team?
 - [ ] plan ARU deployment rotation
 - [ ] coordinate with other recognizer work
-- [ ] camera trapping
-- [ ] draft camera trapping SOP
+- [X] camera trapping
+- [X] draft camera trapping SOP
