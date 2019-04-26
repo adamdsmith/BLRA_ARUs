@@ -51,12 +51,13 @@ For example, consider the first two audio files generated during an ARU survey a
         ```
 
     e. In the open dialog box, check `Grayscale`.
-    f. Inspect the spectrogram for obvious recording issues (e.g., no or excessive background noise).
+    f. Inspect the spectrogram for obvious recording issues (e.g., no or excessive background noise).  
     g. Listen for a few seconds at 2 - 3 locations throughout the recording to confirm adequate recording quality.
     h. Close the recording. If prompted, do not save any changes.
     i. Repeat for the other recordings.
+    j. Note that these recording issues can occur independently on the two channels, so one channel may have no recording issues while the other channel fails. Indicate whether a channel failure occurred in the ARU deployment data sheet. If so, try to locate the file in which the failure occurs and note it as well.
 
-1. If recording quality expectations are met, record SongMeter SM2+ location prefix, recording end date, and file number information in the ARU deployment data sheet.
+1. If recording quality expectations are met, record SongMeter SM2+ location prefix, recording end date, and number of recording files in the ARU deployment data sheet.
 
 1. Separate the stereo recordings by channel.
     a. Open Kaleidoscope software. If it's not installed, visit the [download section of the Wildlife Acoustics website](https://www.wildlifeacoustics.com/download/kaleidoscope-software) to acquire it.
@@ -77,4 +78,6 @@ For example, consider the first two audio files generated during an ARU survey a
 1. Copy the approximately 60 - 100 `.wav` files generated in the `YYYY_ARU_files` directory on the primary external hard drive and copy them to the identically-named directory on the backup external hard drive.
     a. Two or three additional files will be created in the process, with names similar to `log.txt`, `meta.csv`, and `settings.ini`. These can be deleted if the channel splitting process proceded smoothly. The `log.txt` file can be useful in identifying problem files if the process fails.
 
-1. After confirming the files were copied successfully to both external hard drives, the contents of the SD card may be deleted. The SD card can now be used for another deployment.
+1. Copy any  \<ARU ID\>-\<survey point ID\>-SENSOR* files in the `Data` directory on the SD card to the `YYYY_ARU_files` directory on the primary and backup external hard drives.
+
+1. After confirming audio and sensor files were copied successfully to both external hard drives, the contents of the SD card may be deleted. The SD card can now be used for another deployment.
