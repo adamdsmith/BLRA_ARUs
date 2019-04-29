@@ -21,7 +21,7 @@ aru_forecast <- function(lat, lon,
              case_when(
                hour %in% (lubridate::hour(AM_survey) + -2:2) ~ "Sunrise",
                hour %in% (lubridate::hour(PM_survey) + -2:2) ~ "Sunset",
-               hour %in% c(23, 0:3)                          ~ "Midnight",
+               hour %in% c(22:23, 0:3)                       ~ "Midnight",
                TRUE                                          ~ NA_character_),
              levels = c("Midnight", "Sunrise", "Sunset")),
            rain = case_when(
