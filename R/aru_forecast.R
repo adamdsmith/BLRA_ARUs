@@ -21,7 +21,7 @@ aru_forecast <- function(lat, lon,
              case_when(
                hour %in% (lubridate::hour(AM_survey) + -2:2) ~ "Sunrise",
                hour %in% (lubridate::hour(PM_survey) + -2:2) ~ "Sunset",
-               hour %in% c(23, 0:3)                          ~ "Midnight",
+               hour %in% c(22:23, 0:2)                       ~ "Midnight",
                TRUE                                          ~ NA_character_),
              levels = c("Midnight", "Sunrise", "Sunset")),
            rain = case_when(
@@ -35,7 +35,7 @@ aru_forecast <- function(lat, lon,
              wspd_kmh <= max_wsp_kmh                       ~ 0.75,
              wspd_kmh <= 1.25 * max_wsp_kmh                ~ 0.5,
              TRUE                                          ~ 0),
-           date = as.Date(ifelse(hour > 22, 
+           date = as.Date(ifelse(hour > 21, 
                                  as.character(as.Date(date_str) + as.difftime(1, units = "days")), 
                                  date_str))) %>%
     filter(!is.na(window)) %>% ungroup() %>%
