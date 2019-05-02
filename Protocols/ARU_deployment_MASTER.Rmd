@@ -46,9 +46,11 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center", fig.pos = "H")
     c. Center the FoxPro NX4 game caller in the case. The forward and rear speakers should align well with the openings on each end of the enclosure.
     d. Carefully close and latch the case, ensuring the lid aligns with and sits snugly on the case bottom. 
 
+1. **If deploying a camera trap array, program the Bushnell Trophy Cams according to the [Black Rail Camera Trap Array deployment SOP](https://drive.google.com/open?id=1-m_CVs0x3BWWp7seoj7qZmy14LAsv8QX)**
+
 \clearpage
 
-# Field deployment
+# Field deployment ("set")
 
 1. **Attach SongMeter ARU to T-post using wing nuts or optional security nuts**
 
@@ -84,25 +86,45 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center", fig.pos = "H")
 1. **Record relevant data on the ARU deployment data sheet**
     a. These include the ARU (SM2+), FoxPro NX4, and survey point identification, FoxPro NX4 orientation, set date (date if field deployment) and broadcast start date, and broadcast sequence.
     b. Other information on the ARU deployment data sheet will be completed after ARU (SM2+) retrieval and recording review.
+    
+1. **If deploying camera trap array, consult the [Black Rail Camera Trap Array deployment SOP](https://drive.google.com/open?id=1-m_CVs0x3BWWp7seoj7qZmy14LAsv8QX)**
 
-```{r deployed, out.width=".6\\linewidth", fig.cap="Example of deployed ARU/broadcasting unit."}
+```{r deployed, out.width=".5\\linewidth", fig.cap="Example of deployed ARU/broadcasting unit."}
 knitr::include_graphics("./images/Deployed.jpg")
 ```
 
+## Deployment equipment list
+
+- ARU/Remote broadcast unit
+    - SongMeter SM2+ (w/attached plywood, 4 D batteries)
+    - extra D batteries
+    - remote broadcast unit (w/charged battery pack)
+    - 7' T-post
+    - shelf for remote broadcast unit
+    - 1$\frac{1}{2}$" carriage bolt with wing nut (2)
+    - 2" carriage bolt with wing nut or (optional) security nut (2)
+    - 3' bungee cord
+    - eyebolt with nut
+    - #2 Phillips screwdriver
+    - GPS
+    - compass
+    - $\frac{3}{8}$" ratchet drive with security nut socket (optional)
+    - security cable (optional)
+    - padlock (optional)
+    - ARU deployment data sheet(s)
+- Camera trap array (if deploying)
+    - Trophy Cam cameras (with 40.5 mm +2 diopter and poster putty; 4)
+    - Camera boxes and PVC pipe (4)
+    - extra AA batteries
+
 \clearpage
 
-# Field deployment equipment list
+# Field retrieval ("pull")
 
-- SongMeter SM2+ (w/attached plywood)
-- remote broadcast unit (w/charged battery pack)
-- 7' T-post
-- shelf for remote broadcast unit
-- 1$\frac{1}{2}$" carriage bolt with wing nut (2)
-- 2" carriage bolt with wing nut or (optional) security nut (2)
-- 3' bungee cord
-- eyebolt with nut
-- #2 Phillips screwdriver
-- compass
-- $\frac{3}{8}$" ratchet drive with security nut socket (optional)
-- security cable (optional)
-- padlock (optional)
+1. **Power down the SongMeter ARU**
+    a. Remove front panel from ARU.
+    b. Flip `Power Source` switch to `Off`.
+    c. Replace front panel on ARU.
+    d. Record retrieval ("pull") date on the ARU deployment data sheet.
+
+1. **If camera trap array was deployed, consult the [Black Rail Camera Trap Array deployment SOP](https://drive.google.com/open?id=1-m_CVs0x3BWWp7seoj7qZmy14LAsv8QX)**
