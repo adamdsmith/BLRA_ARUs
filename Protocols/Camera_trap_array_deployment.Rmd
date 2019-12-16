@@ -98,7 +98,7 @@ Each camera trap array consists of four (4) camera traps. Camera traps are insta
 ## Camera setup and programming
 
 1. **Attach 40.5 mm +2 diopter over camera lens.**
-    a. Using poster putty, attach diopter over camera lens making sure the diopter does not block the light or motion sensor. This will mean it is **not** centered over the lens and that the upper part of the diopter covers part of the LED IR flash. Try to block as little of the LED IR flash as possible.
+    a. Using poster putty, attach diopter over camera lens making sure the diopter does not block the light sensor. This will mean it is **not** centered over the lens and that the upper part of the diopter covers a small part of the LED IR flash.
 
         ```{r, out.width=".25\\linewidth"}
         # All defaults
@@ -116,6 +116,13 @@ Each camera trap array consists of four (4) camera traps. Camera traps are insta
     b. Ensure the diopter has not shifted and is well-centered and secure over the Trophy Cam lens.
     c. Secure the straps.
     
+## Example installation
+    
+```{r, out.width=".75\\linewidth"}
+knitr::include_graphics("./images/example_deployment.jpg")
+```
+
+
 \clearpage
 
 # Field retrieval ("pull")
