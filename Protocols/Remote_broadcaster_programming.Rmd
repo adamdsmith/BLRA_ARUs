@@ -34,14 +34,14 @@ Note, the following directions apply to the [CN101 DC 12V digital programmable t
 1. **Clear/reset the timer.**
     a. Press the smaller, inset `C` button on the timer. After a few seconds, the unit will reset. This ensures you are working from a clean slate before each deployment.
 
+1. **Put the timer into manual mode.**
+    a. If the timer is locked (i.e., there is a \locked{} icon in the lower left corner of the display), press the `C/R` button 4X.
+    b. If a \manual{} icon (some older models), or `OFF` is indicated along the bottom of the display, proceed to the next step.
+    c. If no \manual{} icon, or `AUTO` or `ON` is indicated along the bottom of the display, press the `MANUAL` button until either the \manual{} icon (some older units) or `OFF` appears along the bottom of the display (newer units).
+
 1. **Set the day of the week and time of the timer.**
     a. Visit [time.gov](https://time.gov/) for current official time.
-    b. If the timer is locked (i.e., there is a \locked{} icon in the lower left corner of the display), press the `C/R` button 4X.
-    c. While holding the \myclock{} button, use the `D+` button to set the current day of the week, the `H+` button to set the current hour, and the `M+` button to set the current minute. If no button is pressed for 2 seconds while holding the \myclock{} button, you will need to release the \myclock{} button and push/hold it again to further adjust the day of week or time.
-    
-1. **Put the timer into manual mode.**
-    a. If a \manual{} icon (some older models), or `ON` is indicated along the bottom of the display, proceed to the next step.
-    b. If no \manual{} icon, or `AUTO` or `OFF` is indicated along the bottom of the display, press the `MANUAL` button until either the \manual{} icon (some older units) or `ON` appears along the bottom of the display (newer units).
+    b. While holding the \myclock{} button, use the `D+` button to set the current day of the week, the `H+` button to set the current hour, and the `M+` button to set the current minute. If no button is pressed for 2 seconds while holding the \myclock{} button, you will need to release the \myclock{} button and push/hold it again to further adjust the day of week or time.
 
 1. **Set the remote broadcast unit program.**
     a. Determine the broadcast sequence to be programmed using the [BLRA Remote Broadcast Unit Sequence List](https://docs.google.com/spreadsheets/d/1KYLsfPsZMw3fH8PDqI03tctwRroWYiiYVCUiZZ_uTCg/edit?usp=sharing).
