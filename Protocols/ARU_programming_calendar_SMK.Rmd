@@ -1,0 +1,33 @@
+---
+title: "2019 ARU/Remote Broadcast programming calendar"
+author: Adam Smith, USFWS Southeast Inventory and Monitoring (adam_d_smith@fws.gov)
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+fontsize: 12
+output: pdf_document
+geometry: margin=0.75in
+header-includes:
+  - \usepackage{caption}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r calendar}
+pacman::p_load(nrsmisc, dplyr, knitr, kableExtra)
+
+source("../R/aru_sequences.R")
+
+survdates2019 <- seq.Date(as.Date("2019-05-01"), as.Date("2019-06-18"), 1)
+
+# St Marks
+#2019 sequence programs times
+seqs <- aru_sequences(30.0824, -84.1623, start = survdates2019) %>%
+  mutate(start_date = format(start_date, "%d %b")) %>%
+  select(`Start date` = start_date, Day = day_of_week, Seq = seq_id, `Seq name` = seq_nm,
+         `Program 1` = prog1, `Program 2` = prog2, `Program 3` = prog3)
+tab <- knitr::kable(seqs, booktabs = TRUE, longtab = TRUE, linesep = "", 
+  caption = "ARU programming sequences by broadcast start date. Broadcast start times have been adjusted by 30 minutes relative to sunrise and sunset according to the protocol.")
+kable_styling(tab, full_width = FALSE, latex_options = c("striped", "repeat_header"))  #%>%
+#  row_spec(0, align = "c")
+```
