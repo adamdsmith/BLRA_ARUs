@@ -121,6 +121,6 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
     a. Flip `Power Source` switch to `Off`.
     
 1. **Replace front panel on SongMeter (ARU)**
-    a. The SongMeter (ARU) is now ready for [deployment](https://drive.google.com/open?id=1iHFSjoDLnAMCnjRqgh2UAGkZQQafVHLM).
+    a. The SongMeter (ARU) is now ready for [deployment](https://drive.google.com/open?id=1k8gQDwouS5CWzSSdwA61fjqcBhi67l7S).
 
 
