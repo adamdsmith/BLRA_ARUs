@@ -83,6 +83,6 @@ training_segs <- pull(training_log, fn)
 
 for (f in training_segs) {
   from <- segfiles[grep(f, segfiles, fixed = TRUE)]
-  to <- file.path(dirname(from), "Classifier_training", f)
+  to <- file.path(dirname(from), "Classifier_training_segments", f)
   file.rename(from, to)
 }
